@@ -1,0 +1,118 @@
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ cmp input.txt decrypt_4.txt
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ ./ex2
+*** PROGRAM N_CIPHER / N_DECIPHER ***
+
+Choose mode:
+ 1 - N_CIPHER (encrypt 8 ASCII chars)
+ 2 - N_DECIPHER (decrypt 16 hex chars)
+Type 1 or 2 + ENTER:
+1
+
+*** PROGRAM N_CIPHER ***
+
+Type plaintext <8 ASCII characters + ENTER>:
+Text ascii:
+00000000
+ssssssssss
+ssssssss
+
+Text hex:   7373737373737373
+Text bin:   0111001101110011011100110111001101110011011100110111001101110011
+
+Type Key <8 ASCII characters + ENTER>:
+Key ascii:
+00000000
+4444444444
+44444444
+
+Key hex:   3434343434343434
+Key bin:   0011010000110100001101000011010000110100001101000011010000110100
+
+Ciphering is running...Done.
+
+Cipher hex: 2a5ea167aff22a36
+Cipher bin: 0010101001011110101000010110011110101111111100100010101000110110
+
+Press ENTER
+
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ ./ex2
+*** PROGRAM N_CIPHER / N_DECIPHER ***
+
+Choose mode:
+ 1 - N_CIPHER (encrypt 8 ASCII chars)
+ 2 - N_DECIPHER (decrypt 16 hex chars)
+Type 1 or 2 + ENTER:
+2
+
+*** PROGRAM N_DECIPHER ***
+
+Type ciphertext <16 hexadecimal characters [0..f] + ENTER>:
+Text hex:
+2a5ea167aff22a36
+2a5ea167aff22a36
+Text bin:   001010100101111010100001011001111010111111110010
+
+Type Key <8 ASCII characters + ENTER>:
+Key ascii:
+00000000
+4444444444
+44444444
+
+Key hex:    3434343434343434
+Key bin:    001101000011010000110100001101000011010000110100
+
+DeCiphering is running...Done.
+
+Decipher ASCII: s s s s s s s s
+DeCipher hex: 7 3 7 3 7 3 7 3 7 3 7 3 7 3 7 3
+DeCipher bin: 0111001101110011011100110111001101110011011100
+
+Press ENTER
+
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ ./ex3
+DES ECB FILE MODE
+1 - Encrypt file
+2 - Decrypt file
+> 1
+Input file: input.txt
+Output file: 44444444444
+ASCII key (8 chars): ^C
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ ./ex3
+DES ECB FILE MODE
+1 - Encrypt file
+2 - Decrypt file
+> 1
+Input file: input.txt
+Output file: crypt_3
+ASCII key (8 chars): 4444444444
+Encrypted.
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ ./ex3
+DES ECB FILE MODE
+1 - Encrypt file
+2 - Decrypt file
+> 2
+Input file: crypt_3
+Output file: decrypt_3.txt
+ASCII key (8 chars): 44444444444
+Decrypted.
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ cmp input.txt decrypt_3.txt 
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ ./ex4
+DES CBC FILE MODE
+1 - Encrypt file (CBC)
+2 - Decrypt file (CBC)
+> 1
+Input file: input.txt
+Output file: crypt_4
+ASCII key (8 chars): 44444444444
+Encrypted (CBC).
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ ./ex4
+DES CBC FILE MODE
+1 - Encrypt file (CBC)
+2 - Decrypt file (CBC)
+> 2
+Input file: crypt_4
+Output file: decrypt_4.txt
+ASCII key (8 chars): 444444444444
+Decrypted (CBC).
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ cmp input.txt decrypt_3.txt 
+mango@T14:~/sem2/Ochrona_Danych/lab6/src$ 
